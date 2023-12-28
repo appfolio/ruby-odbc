@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.license               = 'Nonstandard'
   spec.files                 = Dir['**/*'].select { |f| f[%r{^(lib/|ext/|.*gemspec)}] }
   spec.require_paths         = ['lib']
-  spec.extensions            = ['ext/extconf.rb']
+  spec.extensions            = ['ext/extconf.rb', 'ext/utf8/extconf.rb']
   spec.required_ruby_version = Gem::Requirement.new('>= 3.0')
 
   spec.metadata['allowed_push_host'] = 'https://rubygems.pkg.github.com/appfolio'

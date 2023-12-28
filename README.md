@@ -1,8 +1,4 @@
-= ODBC binding for Ruby
-
-* Homepage: http://www.ch-werner.de/rubyodbc/
-
-== DESCRIPTION:
+# RubyObdc
 
 This is an ODBC binding for Ruby. So far it has been tested with
 
@@ -20,16 +16,20 @@ This is an ODBC binding for Ruby. So far it has been tested with
 
     - Ruby 1.8.*, SQLite/ODBC >= 0.67, libiodbc 3.52.4 on Fedora Core 3 x86
 
-    Michael Neumann <neumann@s-direktnet.de> and
-    Will Merrell <wmerrell@catalystcorp.com> reported successful compilation
-    with Cygwin on Win32.
+    - Ruby 2.0.0, SQLite/ODBC >= 0.93, unixODBC 2.2.14 on Ubuntu 12.04 x86
 
-== Requirements:
+    - Ruby >= 2.4
+
+    Michael Neumann <neumann @nospam@ s-direktnet.de> and
+    Will Merrell <wmerrell @nospam@ catalystcorp.com> reported successful
+    compilation with Cygwin on Win32.
+
+Requirements:
 
     - Ruby 1.6.[3-8] or Ruby >= 1.7
-    - unixODBC 2.x or libiodbc 3.52 on UN*X
+    - unixODBC 2.x or libiodbc 3.52 on UN*X 
 
-== Installation:
+Installation:
 
     $ ruby -Cext extconf.rb [--enable-dlopen|--disable-dlopen]
     $ make -C ext
@@ -42,13 +42,13 @@ This is an ODBC binding for Ruby. So far it has been tested with
     locations, use the option --with-odbc-dir=<non-standard-location>
     when running extconf.rb
 
-=== Installation of utf8 version:
+Installation of utf8 version:
 
     $ ruby -Cext/utf8 extconf.rb [--enable-dlopen|--disable-dlopen]
     $ make -C ext/utf8
     # make -C ext/utf8 install
 
-=== Installation MSVC:
+Installation MSVC:
 
     C:..>ruby -Cext extconf.rb
     C:..>cd ext
@@ -59,13 +59,13 @@ This is an ODBC binding for Ruby. So far it has been tested with
     C:..>nmake
     C:..>nmake install
 
-== Testing:
+Testing:
 
     $ ruby -Ctest test.rb DSN [uid] [pwd]
  or
     $ ruby -KU -Ctest/utf8 test.rb DSN [uid] [pwd]
 
-== Usage:
+Usage:
 
     Refer to doc/odbc.html
 
@@ -100,13 +100,13 @@ This is an ODBC binding for Ruby. So far it has been tested with
     allow to use both versions simultaneously in special
     situations.
 
-== TODO:
+TODO:
 
     - heavier testing
     - improve documentation
 
-== Author:
+Author:
 
     Christian Werner
-    mailto:chw@ch-werner.de
+    mailto:chw @nospam@ ch-werner.de
     http://www.ch-werner.de/rubyodbc
