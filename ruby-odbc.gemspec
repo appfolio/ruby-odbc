@@ -1,21 +1,16 @@
-# frozen_string_literal: true
-
-require_relative 'lib/ruby-odbc/version'
-
-Gem::Specification.new do |spec|
-  spec.name                  = 'ruby-odbc'
-  spec.version               = RubyOdbc::VERSION
-  spec.platform              = Gem::Platform::RUBY
-  spec.author                = 'AppFolio'
-  spec.email                 = 'dev@appfolio.com'
-  spec.description           = 'ODBC binding for Ruby.'
-  spec.summary               = spec.description
-  spec.homepage              = 'https://github.com/appfolio/ruby-odbc'
-  spec.license               = 'Nonstandard'
-  spec.files                 = Dir['**/*'].select { |f| f[%r{^(lib/|ext/|.*gemspec)}] }
-  spec.require_paths         = ['lib']
-  spec.extensions            = ['ext/extconf.rb']
-  spec.required_ruby_version = Gem::Requirement.new('>= 3.0')
-
-  spec.metadata['allowed_push_host'] = 'https://rubygems.pkg.github.com/appfolio'
+require 'date'
+spec = Gem::Specification.new do |s|
+  s.name = "ruby-odbc"
+  s.version = "0.999992"
+  s.date = Date.today.to_s
+  s.author = "Christian Werner"
+  s.email = "chw @nospam@ ch-werner.de"
+  s.summary = "ODBC binding for Ruby"
+  s.homepage = "http://www.ch-werner.de/rubyodbc"
+  s.files = Dir.glob("**/*")
+  s.require_paths << 'lib'
+  s.test_files = Dir.glob('tests/*.rb')
+  s.has_rdoc = false
+  s.extra_rdoc_files = ["README", "COPYING", "ChangeLog", "GPL", "doc/odbc.html"]
+  s.extensions = ["ext/extconf.rb", "ext/utf8/extconf.rb"]
 end
